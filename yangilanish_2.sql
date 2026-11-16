@@ -1,0 +1,28 @@
+-- 2-yangilanish: faolsizlantirish, e'lonlar, filial chati, avans, kassa, rasm, Telegram. SQL Editor'da bir marta ishga tushiring.
+alter table profiles add column if not exists telegram_id text;
+create function set_my_tg(t text) returns void language sql security definer set search_path=public as $$update profiles set telegram_id=t where id=auth.uid()$$;
+alter table tasks add column if not exists photo text;
+grant update(status,photo) on tasks to authenticated;
+alter table trips add column if not exists arrive_photo text,add column if not exists arrive_note text;
+grant update(status,collected,arrived_at,arrive_photo,arrive_note) on trips to authenticated;
+create table advance_requests(id bigserial primary key,user_id uuid references profiles,amount numeric,note text,status text default 'pending' check(status in('pending','approved','rejected')),created_at timestamptz default now());
+create table cash_handover(id bigserial primary key,driver_id uuid references profiles,amount numeric,created_by uuid references profiles,created_at timestamptz default now());
+create table announcements(id bigserial primary key,title text,body text,branch_id int references branches,created_by uuid references profiles,created_at timestamptz default now());
+create table ann_reads(announcement_id bigint references announcements on delete cascade,user_id uuid references profiles,primary key(announcement_id,user_id));
+alter table advance_requests enable row level security;alter table cash_handover enable row level security;alter table announcements enable row level security;alter table ann_reads enable row level security;
+create policy v1 on advance_requests for select to authenticated using(user_id=auth.uid() or is_admin());
+create policy v2 on advance_requests for insert to authenticated with check(user_id=auth.uid() and status='pending');
+create policy v3 on advance_requests for update to authenticated using(is_admin()) with check(is_admin());
+create policy h1 on cash_handover for select to authenticated using(driver_id=auth.uid() or is_admin());
+create policy h2 on cash_handover for insert to authenticated with check(is_admin());
+create policy n1 on announcements for select to authenticated using(branch_id is null or is_admin() or branch_id=(select branch_id from profiles where id=auth.uid()));
+create policy n2 on announcements for all to authenticated using(is_admin()) with check(is_admin());
+create policy q1 on ann_reads for select to authenticated using(user_id=auth.uid() or is_admin());
+create policy q2 on ann_reads for insert to authenticated with check(user_id=auth.uid());
+alter table messages add column if not exists room text default 'all';
+drop policy if exists m1 on messages;drop policy if exists m2 on messages;
+create policy m1 on messages for select to authenticated using(room='all' or is_admin() or room='b'||(select branch_id from profiles where id=auth.uid())::text);
+create policy m2 on messages for insert to authenticated with check(user_id=auth.uid() and (room='all' or is_admin() or room='b'||(select branch_id from profiles where id=auth.uid())::text));
+insert into storage.buckets(id,name,public) values('photos','photos',false) on conflict do nothing;
+create policy ph1 on storage.objects for insert to authenticated with check(bucket_id='photos');
+create policy ph2 on storage.objects for select to authenticated using(bucket_id='photos');
