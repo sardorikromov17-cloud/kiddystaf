@@ -1,0 +1,26 @@
+-- schema.sql DAN KEYIN ishga tushiring: vazifalar, moliya, shafyor, chat
+create table tasks(id bigserial primary key,user_id uuid references profiles,title text,note text,due date,status text default 'new' check(status in('new','accepted','done','rejected')),created_by uuid references profiles,created_at timestamptz default now());
+create table transactions(id bigserial primary key,user_id uuid references profiles,amount numeric,kind text,note text,created_by uuid references profiles,created_at timestamptz default now());
+create table trips(id bigserial primary key,driver_id uuid references profiles,title text,owner text,phone text,address text,cargo text,price numeric default 0,status text default 'ontheway' check(status in('ontheway','arrived','done')),collected numeric,arrived_at timestamptz,created_at timestamptz default now());
+create table locations(user_id uuid primary key references profiles,lat float8,lng float8,updated_at timestamptz default now());
+create table messages(id bigserial primary key,user_id uuid references profiles,body text,created_at timestamptz default now());
+alter table tasks enable row level security;alter table transactions enable row level security;alter table trips enable row level security;alter table locations enable row level security;alter table messages enable row level security;
+revoke update on tasks from authenticated;grant update(status) on tasks to authenticated;
+revoke update on trips from authenticated;grant update(status,collected,arrived_at) on trips to authenticated;
+create policy k1 on tasks for select to authenticated using(user_id=auth.uid() or is_admin());
+create policy k2 on tasks for update to authenticated using(user_id=auth.uid()) with check(user_id=auth.uid());
+create policy k3 on tasks for insert to authenticated with check(is_admin());
+create policy k4 on tasks for delete to authenticated using(is_admin());
+create policy t1 on transactions for select to authenticated using(user_id=auth.uid() or is_admin());
+create policy t2 on transactions for insert to authenticated with check(is_admin());
+create policy t3 on transactions for delete to authenticated using(is_admin());
+create policy r1 on trips for select to authenticated using(driver_id=auth.uid() or is_admin());
+create policy r2 on trips for update to authenticated using(driver_id=auth.uid()) with check(driver_id=auth.uid());
+create policy r3 on trips for insert to authenticated with check(is_admin());
+create policy r4 on trips for delete to authenticated using(is_admin());
+create policy o1 on locations for select to authenticated using(user_id=auth.uid() or is_admin());
+create policy o2 on locations for insert to authenticated with check(user_id=auth.uid());
+create policy o3 on locations for update to authenticated using(user_id=auth.uid());
+create policy m1 on messages for select to authenticated using(true);
+create policy m2 on messages for insert to authenticated with check(user_id=auth.uid());
+alter publication supabase_realtime add table messages;

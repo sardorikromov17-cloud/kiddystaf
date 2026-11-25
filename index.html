@@ -47,6 +47,62 @@ nav button,.tile{position:relative}.bd{display:none;position:absolute;top:1px;le
 .stk{font-size:46px;line-height:1.1;margin:6px 40px 6px 0}.stk.me{margin:6px 0 6px 40px;text-align:right}.stp{display:none;grid-template-columns:repeat(8,1fr);gap:4px;background:#fff;border-radius:14px;padding:8px;margin:8px 0;font-size:24px;text-align:center}.stp span{cursor:pointer;padding:3px 0;border-radius:8px}.ib{flex:none;width:42px;background:#E8EAF7;color:#4A57A6;box-shadow:none;padding:10px 0;font-size:18px}
 @media print{#slipv{position:static!important;display:block}.np{display:none!important}}
 
+/* ===== v8: yangi dizayn (Kiddy Toys: g'isht-blok uslubi, toza va tartibli) ===== */
+@font-face{font-family:Onest;src:url(fonts/onest.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:Unbounded;src:url(fonts/unbounded.woff2) format('woff2');font-weight:200 900;font-display:swap}
+:root{--ink:#1D2566;--p:#1D2566;--p2:#3B4690;--bg:#F4F5F8;--tx:#161B3A;--mu:#6B7288;--ln:#E3E5EC;--gr:#4E8A2B;--rd:#C93434;--or:#D9771A;--bl:#4A57A6;--fd:Unbounded,Onest,system-ui,sans-serif}
+body{font-family:Onest,-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);font-size:14.5px;line-height:1.5;padding-bottom:78px}
+header{max-width:none;border-radius:0;background:#fff;color:var(--tx);box-shadow:none;border-bottom:1px solid var(--ln);padding:calc(10px + env(safe-area-inset-top)) max(16px,calc((100vw - 520px)/2 + 16px)) 10px;position:sticky;top:0;z-index:30;gap:10px}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:4px;background:linear-gradient(90deg,#4A57A6 0 25%,#7BA23A 25% 50%,#E8892A 50% 75%,#D63A3A 75% 100%)}
+header b{font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:-.2px;color:var(--ink)}header small{opacity:1;color:var(--mu);font-size:12px}
+.lg{background:none;width:36px;height:36px;border-radius:0}.lg img{border-radius:8px}
+header #out{background:#fff!important;color:var(--mu)!important;border:1px solid var(--ln)!important;border-radius:10px;font-weight:600}
+main{padding:16px 14px;max-width:520px}
+.c{border-radius:14px;box-shadow:none;border:1px solid var(--ln);padding:16px}
+.c>b:first-child{font-family:var(--fd);font-size:13px;font-weight:600;letter-spacing:-.1px;color:var(--ink);margin-bottom:10px}
+.m{color:var(--mu)}
+button{border-radius:10px;padding:13px 12px;font-weight:600;font-size:14px;background:var(--ink);box-shadow:none;letter-spacing:.1px}button:hover{background:var(--p2)}
+.g{background:var(--gr)}.g:hover{background:#42761F}.rd{background:var(--rd)}.rd:hover{background:#B02A2A}.bl{background:var(--bl)}.or{background:var(--or)}.or:hover{background:#BF6812}
+.gh{background:#fff!important;color:var(--ink)!important;border:1.5px solid var(--ln)!important}
+button:disabled{opacity:.4;cursor:not-allowed}
+input,select{border-radius:10px;padding:12px;background:#fff;border:1.5px solid var(--ln);font-family:inherit}input:focus,select:focus{border-color:var(--ink);box-shadow:0 0 0 3px #1D256614}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #4A57A6;outline-offset:2px}
+.hero{background:var(--ink);border-radius:16px;box-shadow:none;position:relative;overflow:hidden;padding:18px}
+.hero::after{content:"";position:absolute;right:-16px;bottom:-16px;width:64px;height:64px;border-radius:16px;background:#E8892A;transform:rotate(14deg);opacity:.9}
+.hero::before{content:"";position:absolute;right:38px;bottom:-12px;width:34px;height:34px;border-radius:9px;background:#7BA23A;transform:rotate(-10deg);opacity:.9}
+.hero>*{position:relative;z-index:1}
+.hero .big,.big{font-family:var(--fd);font-weight:700;letter-spacing:-1px;font-size:26px}
+.hr{margin-bottom:16px}.ava{background:#fff;color:var(--ink);font-family:var(--fd);font-size:13px}
+.chip2{background:#ffffff26;font-weight:600}
+.li{padding:11px 0}
+.chip{font-weight:600;padding:3px 10px;font-size:11.5px;letter-spacing:.1px}
+.chip.accepted{background:#E6E9F8;color:#2E3A8C}.chip.done,.chip.approved{background:#E4F1DA;color:#3E7320}.chip.pending,.chip.new{background:#FDF0D3;color:#9A5A08}.chip.rejected,.chip.late{background:#FBE3E3;color:#A32626}
+.pos{color:var(--gr)}.neg{color:var(--rd)}
+.st{gap:8px}.st div{border-radius:14px;box-shadow:none;border:1px solid var(--ln);padding:14px 8px;font-size:11.5px}.st b{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.st div:nth-child(1){border-top:3px solid var(--gr)}.st div:nth-child(2){border-top:3px solid var(--or)}.st div:nth-child(3){border-top:3px solid var(--rd)}.st div:nth-child(4){border-top:3px solid var(--bl)}
+table{font-size:13px}td{padding:9px 2px}
+a{color:var(--bl);font-weight:600}
+nav{left:0;transform:none;bottom:0;width:100%;max-width:none;border-radius:0;box-shadow:none;border-top:1px solid var(--ln);padding:4px max(6px,calc((100vw - 520px)/2)) calc(4px + env(safe-area-inset-bottom));margin:0;background:#fff;gap:2px}
+nav button{border-radius:10px;color:#8A90A6;font-weight:600;font-size:10.5px;padding:8px 2px 6px;background:none!important;position:relative}
+nav button:hover{background:none}
+nav .on{color:var(--ink);background:none!important}
+nav .on::before{content:"";position:absolute;top:0;left:30%;right:30%;height:3px;border-radius:0 0 3px 3px;background:var(--ink)}
+nav svg{stroke-width:1.8}nav .on svg{stroke-width:2.2}
+.b{border-radius:14px 14px 14px 4px;box-shadow:none;border:1px solid var(--ln)}.b.me{background:var(--ink);border-color:var(--ink);border-radius:14px 14px 4px 14px}
+.hero .chip,.hero .chip2{color:#fff}
+#sh .sheet{border-radius:18px 18px 0 0;padding-bottom:84px}
+.tile{background:#fff!important;border:1px solid var(--ln);border-radius:14px!important;color:var(--tx)}.tile svg{stroke:var(--ink)!important}
+.gt{font-family:var(--fd);font-size:11px!important;font-weight:600;letter-spacing:0!important;text-transform:none!important;color:var(--mu)}
+.gtb th{background:var(--ink)}.gtb .n{font-family:Onest}
+.sk{border-radius:10px}
+.bd.on{background:var(--rd)!important}
+@media(min-width:900px){body{padding-bottom:0}nav button{flex:none;margin-bottom:6px}nav{position:fixed;left:0;top:0;bottom:0;width:84px;flex-direction:column;justify-content:flex-start;border-top:0;border-right:1px solid var(--ln);padding:90px 6px 10px;overflow:auto}nav .on::before{top:25%;bottom:25%;left:0;right:auto;width:3px;height:auto;border-radius:0 3px 3px 0}header,main,#dm{margin-left:84px;max-width:none}main{max-width:760px;margin:0 auto 0 calc(84px + 24px)}header{padding-left:24px;padding-right:24px}}
+.tdh{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;border-color:var(--ink)}.tdh .m{color:#ffffffb3}.tdd{font-family:var(--fd);font-size:17px;font-weight:700;letter-spacing:-.3px;margin-top:2px}.tdc{font-family:var(--fd);font-size:24px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}.tg3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.tl{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-left:5px solid var(--bl);transition:.12s}.tl:active{transform:scale(.97)}.tl:hover{border-color:var(--ink)}
+.tl b{font-family:var(--fd);font-size:30px;font-weight:700;letter-spacing:-1px;color:var(--ink);line-height:1.1}.tl span{font-size:13px;color:var(--mu);font-weight:600}
+.tl.g{border-left-color:var(--gr)}.tl.o{border-left-color:var(--or)}.tl.r{border-left-color:var(--rd)}.tl.b{border-left-color:var(--bl)}
+.gtb .hh{color:#4E8A2B;font-weight:700}.tl.s{padding:10px 12px;border-left-width:1px;align-items:flex-start}.tl.s b{font-size:20px}.tl.s span{font-size:12px}
 </style></head><body>
 <header><div class=lg><img src=logo-k.png alt=K></div><div><b>Kiddy Ishxona</b><small id=who>Boshqaruv tizimi</small></div><button id="out" style="display:none" onclick="db.auth.signOut().then(()=>location.reload())">Chiqish</button></header>
 <div id="dm"></div><main id="v"></main><div id="md"></div><div id="sh" onclick="A.menu()"></div><div id="slipv"></div><nav id="n"></nav>
@@ -339,7 +395,7 @@ const GM={home:'Asosiy',month:'Asosiy',tasks:'Asosiy',fin:'Asosiy',trips:'Asosiy
 function buildNav(T){const pr=A.pr=(PRIM[pf.role]||PRIM.employee).filter(k=>T.some(x=>x[0]==k)),lab=k=>T.find(x=>x[0]==k)[1];
 $('#n').innerHTML=pr.map(k=>`<button data-t=${k} onclick="nv('${k}')"><svg viewBox="0 0 24 24">${IC[k]}</svg>${lab(k)}<b class=bd data-bd=${k}></b></button>`).join('')+`<button id=mb onclick=A.menu()><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Menyu<b class=bd id=mbd></b></button>`;
 const gs={};T.forEach(x=>(gs[GM[x[0]]||'Boshqa']??=[]).push(x));
-$('#sh').innerHTML='<div class=sheet onclick=event.stopPropagation()>'+['Asosiy','Kundalik','Xodimlar','Moliya','Aloqa','Boshqa'].filter(g=>gs[g]).map(g=>`<div class=gt>${g}</div><div class=grid>${gs[g].map(x=>`<div class=tile onclick="A.mgo('${x[0]}')"><svg viewBox="0 0 24 24" width=26 height=26>${IC[x[0]]}</svg><span>${x[1]}</span><b class=bd data-bd=${x[0]}></b></div>`).join('')}</div>`).join('')+'<div style="text-align:center;color:#94A3B8;font-size:11px;margin:14px 0 70px">Versiya v19</div></div>'}
+$('#sh').innerHTML='<div class=sheet onclick=event.stopPropagation()>'+['Asosiy','Kundalik','Xodimlar','Moliya','Aloqa','Boshqa'].filter(g=>gs[g]).map(g=>`<div class=gt>${g}</div><div class=grid>${gs[g].map(x=>`<div class=tile onclick="A.mgo('${x[0]}')"><svg viewBox="0 0 24 24" width=26 height=26>${IC[x[0]]}</svg><span>${x[1]}</span><b class=bd data-bd=${x[0]}></b></div>`).join('')}</div>`).join('')+'<div style="text-align:center;color:#94A3B8;font-size:11px;margin:14px 0 70px">Versiya v22</div></div>'}
 A.menu=()=>{paintBadges();$('#sh').classList.toggle('on')};A.menu0=()=>$('#sh').classList.toggle('on');A.mgo=k=>{$('#sh').classList.remove('on');nv(k)};
 navigator.serviceWorker?.addEventListener('message',e=>{if(e.data=='new'&&!$('#upd'))document.body.insertAdjacentHTML('afterbegin','<div id=upd style="background:#4A57A6;color:#fff;padding:10px;text-align:center;font-size:13px;position:sticky;top:0;z-index:60">Yangi versiya tayyor. <b onclick=location.reload() style="text-decoration:underline;cursor:pointer;margin-left:6px">Yangilash</b></div>')});
 const _p4=V.prof;V.prof=async()=>{const h=await _p4();return pf.role=='admin'?h+`<div class=c><b>Tezlik testi</b><div class=m>Server javobi necha millisekundda kelishini o'lchaydi.</div><div class=r><button class=bl onclick=A.ping()>O'lchash</button></div><div class=m id=pg style="margin-top:8px"></div></div>`:h};
@@ -385,9 +441,9 @@ A.gr.push([x.key,WD[x.dw],x.i||'',x.o||'',x.h||'',x.lt||'',x.er||'',x.t||(x.lt>G
 return `<tr class="${x.cl}"><td>${x.key.slice(8)}.${x.key.slice(5,7)} <small>${WD[x.dw]}</small></td><td>${x.g?'<b>'+x.i+'</b>':x.t}</td><td>${x.g?x.o:''}</td><td>${x.g?x.h+' s':''}</td><td>${x.g?(x.lt>GRACE?`<span class="chip late">${x.lt} daq kech</span>`:'')+chipE(x.er)+phl(x.g.pi):''}</td></tr>`}).join('');
 return head+`<div class=st><div><b>${k}</b>Kun</div><div><b>${lt}</b>Kechikish</div><div><b>${h.toFixed(0)}</b>Soat</div></div><div class=c><b>${esc(p.full_name)} · ${m}</b><table class=dtb><tr><th>Sana</th><th>Keldi</th><th>Ketdi</th><th>Soat</th><th>Holat</th></tr>${rows}</table></div>`}
 A.gr=[];A.gh=['Xodim',...Array.from({length:dm},(_,i)=>i+1),'Kun','Kechikish','Soat'];
-const rows=u.map(p=>{const xr={n:p.full_name,d:{}};A.xd.push(xr);let k=0,lt=0,h=0;const cells=[],csv=[p.full_name];for(let d=1;d<=dm;d++){const x=info(p,d);let c='';if(x.g){xr.d[d]=x.g;k++;if(x.lt>GRACE)lt++;if(x.g.out)h+=(new Date(x.g.out)-new Date(x.g.in))/36e5;c=`<b>${x.i}</b><br><small>${x.o}</small>`;csv.push(x.i+(x.o!='—'?'-'+x.o:''))}else{c=x.cl=='of'?(x.t=='ruxsat'?'R':'·'):x.cl=='ab'?'✗':'';csv.push(x.t||'')}cells.push(`<td class="${x.cl}" title="${x.key}">${c}</td>`)}
+const rows=u.map(p=>{const xr={n:p.full_name,d:{}};A.xd.push(xr);let k=0,lt=0,h=0;const cells=[],csv=[p.full_name];for(let d=1;d<=dm;d++){const x=info(p,d);let c='';if(x.g){xr.d[d]=x.g;k++;if(x.lt>GRACE)lt++;if(x.g.out)h+=(new Date(x.g.out)-new Date(x.g.in))/36e5;c=`<b>${x.i}</b><br><small>${x.o}</small>${x.h!='—'?'<br><small class=hh>'+x.h+' s</small>':''}`;csv.push(x.i+(x.o!='—'?'-'+x.o:''))}else{c=x.cl=='of'?(x.t=='ruxsat'?'R':'·'):x.cl=='ab'?'✗':'';csv.push(x.t||'')}cells.push(`<td class="${x.cl}" title="${x.key}">${c}</td>`)}
 csv.push(k,lt,h.toFixed(1));A.gr.push(csv);return `<tr><td class=n>${esc(p.full_name)}</td>${cells.join('')}<td class=tt>${k}</td><td class=tt>${lt}</td><td class=tt>${h.toFixed(0)}</td></tr>`}).join('');
-return head+`<div class=m style="margin:0 4px 6px">Katakda: yuqorida — kelgan vaqt, pastda — ketgan vaqt. Yashil — o'z vaqtida, qizil — kech yoki kelmagan, kulrang — dam olish (·) yoki ruxsat (R). Xodim nomini tanlasangiz, uning kunlari alohida ro'yxatda chiqadi.</div><div style="overflow:auto;background:#fff;border-radius:14px;max-height:72vh;box-shadow:0 2px 14px #1B21420D"><table class=gtb><tr><th class=n>Xodim</th>${Array.from({length:dm},(_,i)=>`<th>${i+1}</th>`).join('')}<th>Kun</th><th>Kech</th><th>Soat</th></tr>${rows}</table></div>`};
+return head+`<div class=m style="margin:0 4px 6px">Katakda: yuqorida — kelgan vaqt, o'rtada — ketgan vaqt, pastda — shu kun necha soat ishlagani. Yashil — o'z vaqtida, qizil — kech yoki kelmagan, kulrang — dam olish (·) yoki ruxsat (R). Xodim nomini tanlasangiz, uning kunlari alohida ro'yxatda chiqadi.</div><div style="overflow:auto;background:#fff;border-radius:14px;max-height:72vh;box-shadow:0 2px 14px #1B21420D"><table class=gtb><tr><th class=n>Xodim</th>${Array.from({length:dm},(_,i)=>`<th>${i+1}</th>`).join('')}<th>Kun</th><th>Kech</th><th>Soat</th></tr>${rows}</table></div>`};
 A.csvg=()=>{const t=[A.gh,...A.gr].map(r=>r.map(s=>'"'+String(s).replace(/"/g,'""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+t],{type:'text/csv'}));a.download='jadval-'+A.m+'.csv';a.click()};
 /* kamera va QR */
 const camMsg=e=>!window.isSecureContext?'Kamera faqat https:// manzilda ishlaydi.':e.name=='NotAllowedError'?'Kameraga ruxsat berilmagan. Telefon yoki brauzer sozlamalarida shu sayt uchun kameraga ruxsat bering (iPhone: Sozlamalar → Safari → Kamera).':e.name=='NotFoundError'?'Kamera topilmadi.':e.name=='NotReadableError'?'Kamera boshqa ilova tomonidan band. Boshqa ilovalarni yoping va qayta urining.':'Kamera ochilmadi: '+(e.message||e);
@@ -483,6 +539,30 @@ const card=L.length?`<div class=c><b>Mijozlar bo'yicha (oxirgi reyslar)</b>${L.m
 return h.replace('<div class=c><b>Reyslar</b>',card+'<div class=c><b>Reyslar</b>')}}
 setInterval(()=>{if(!document.hidden&&typeof tab!='undefined'&&tab=='today'&&pf&&['admin','manager'].includes(pf.role))go('today',true)},60000);
 (()=>{const d=document.createElement('div');d.id='off';d.style.cssText='display:none;position:fixed;top:0;left:0;right:0;z-index:99;background:#B91C1C;color:#fff;text-align:center;font-size:13px;padding:6px';d.textContent='Internet yo\'q — ulanish tiklanishini kuting';document.body.appendChild(d);const f=()=>d.style.display=navigator.onLine?'none':'block';addEventListener('online',()=>{f();try{go(tab,true)}catch(e){}});addEventListener('offline',f);f()})();
+/* ===== v9: Bugun paneli — bosiladigan kartalar, soat va sana ===== */
+const UWD=['Yakshanba','Dushanba','Seshanba','Chorshanba','Payshanba','Juma','Shanba'],UMO=['yanvar','fevral','mart','aprel','may','iyun','iyul','avgust','sentyabr','oktyabr','noyabr','dekabr'];
+const TDK={w:['Hozir ishda','Ishda','done'],k:['Ishdan ketganlar','Ketdi',''],l:['Kechikkanlar','Kechikdi','late'],n:['Kelmaganlar','Kelmadi','rejected'],r:['Ruxsatdagilar','Ruxsatda','accepted'],o:['Dam olayotganlar','Dam olish',''],p:['Hali kelish vaqti bo\'lmaganlar','Kutilmoqda','pending']};
+V.today=async()=>{const t=ymd(new Date()),now=new Date();if(!A.tdt||Date.now()-A.tdt>9e4)A.td=null;A.tdt=Date.now();
+const[u,a,l,br,sos]=await Promise.all([PQ().order('full_name'),db.from('attendance').select('*').gte('created_at',day0()).order('created_at'),db.from('leaves').select('*').eq('status','approved').lte('from_date',t).gte('to_date',t),db.from('branches').select('id,name'),db.from('sos').select('*,profiles(full_name)').gte('created_at',new Date(Date.now()-864e5).toISOString()).order('created_at',{ascending:false})]);
+const G={};group(a.data).forEach(g=>G[g.u]=g);const L=new Set(l.data.map(x=>x.user_id)),B={};br.data.forEach(x=>B[x.id]=x.name);
+const C={w:[],k:[],l:[],n:[],r:[],o:[],p:[]};const act=u.data.filter(p=>p.active!==false);
+act.forEach(p=>{const g=G[p.id],lt=late(g?.in,p.shift_start),it={p,g,lt,br:B[p.branch_id]||''};
+if(g?.in){(g.out?C.k:C.w).push(it);if(lt>GRACE)C.l.push(it)}else if(L.has(p.id))C.r.push(it);else if((p.off_days||[p.off_day]).includes(now.getDay()))C.o.push(it);
+else{const[h,m]=p.shift_start.split(':'),st=new Date();st.setHours(+h,+m+GRACE,0,0);(now>st?C.n:C.p).push(it)}});
+const exp=act.length-C.o.length-C.r.length,came=C.w.length+C.k.length,pc=exp>0?Math.round(came/exp*100):0;
+const bd=act.filter(p=>p.birth_date&&p.birth_date.slice(5)==t.slice(5)).map(p=>esc(p.full_name)).join(', ');
+A.tdd={C,t,exp,came,pc,bd,sos:sos.data||[],cnt:act.length,nb:br.data.length};
+return A.tdh()};
+A.tdh=()=>{const D=A.tdd,C=D.C;if(A.td){const m=TDK[A.td],L=C[A.td];return `<div class=c><div class=r style="margin:0 0 10px"><button class=gh style="flex:none;width:auto;padding:8px 14px" onclick="A.tds(null)">← Orqaga</button></div><b>${m[0]} · ${L.length}</b>${L.map(x=>`<div class=li><span><b>${esc(x.p.full_name)}</b><br><span class=m>${esc(x.br)}${x.p.position?' · '+esc(x.p.position):''}${x.g?.in?' · keldi '+hm(x.g.in):''}${x.g?.out?' · ketdi '+hm(x.g.out):''}</span>${x.lt>GRACE?'<br>'+chipL(x.lt):''}${x.g?phl(x.g.pi):''}</span><span class="chip ${m[2]}">${A.td=='l'?x.lt+' daq':m[1]}</span></div>`).join('')||'<p class=m>Hech kim yo\'q</p>'}</div>`}
+const n=new Date(),tl=(k,lab,cl)=>`<div class="tl ${cl}" onclick="A.tds('${k}')"><b>${C[k].length}</b><span>${lab}</span></div>`;
+return `<div class="c tdh"><div><div class=m>${UWD[n.getDay()]}</div><div class=tdd>${n.getDate()}-${UMO[n.getMonth()]} ${n.getFullYear()}</div></div><div id=clk class=tdc>${n.toLocaleTimeString('en-GB')}</div></div>
+${D.sos.filter(sosVisible).map(x=>`<div class=c style="background:#FBE3E3"><span class=xb onclick="A.sx(${x.id})">✕</span><b>🚨 SOS: ${esc(x.profiles?.full_name)}</b> · ${hm(x.created_at)}<div class=r><a target=_blank href="https://www.openstreetmap.org/?mlat=${x.lat}&mlon=${x.lng}#map=16/${x.lat}/${x.lng}">Xaritada ochish</a></div></div>`).join('')}
+<div class=tg>${tl('w','Ishda','g')}${tl('k','Ketdi','b')}${tl('l','Kechikdi','o')}${tl('n','Kelmadi','r')}</div>
+<div class=tg3>${tl('r','Ruxsatda','s')}${tl('o','Dam olish','s')}${tl('p','Kutilmoqda','s')}</div>
+<div class=c><b>Umumiy ma'lumot</b><div class=li><span>Jami xodimlar</span><b>${D.cnt}</b></div><div class=li><span>Bugun ishlashi kerak</span><b>${D.exp}</b></div><div class=li><span>Kelganlar</span><b>${D.came} (${D.pc}%)</b></div><div class=li style="cursor:pointer" onclick="nv('lv')"><span>Kutilayotgan so'rovlar</span><b>${A.bd?.lv||0} ›</b></div><div class=li style="cursor:pointer" onclick="nv('hisobot')"><span>Hisobot olish</span><b>›</b></div></div>
+${D.bd?`<div class=c>🎂 Bugun tug'ilgan kun: <b>${D.bd}</b></div>`:''}`};
+A.tds=k=>{A.td=k;A.tdt=Date.now();$('#v').innerHTML=A.tdh();scrollTo(0,0)};
+setInterval(()=>{const e=$('#clk');if(e)e.textContent=new Date().toLocaleTimeString('en-GB')},1000);
 /* ---------- DEMO ma'lumotlar (Supabase ulanmaganda) ---------- */
 function mock(){const t=new Date(),at=(h,m,d=0)=>{const x=new Date(t);x.setDate(x.getDate()-d);x.setHours(h,m,0,0);return x.toISOString()};
 const P=(id,n,r,o=0,s='08:00:00')=>({id,full_name:n,role:r,branch_id:1,shift_start:s,shift_end:'19:00:00',off_day:o,off_days:[o],phone:'+998901234567',position:'Sotuvchi',birth_date:'1995-05-12',active:true});
