@@ -1,4 +1,4 @@
-const C='kiddy-x22',SHELL=['./','index.html','manifest.json','supabase.min.js','fonts/onest.woff2','fonts/unbounded.woff2','jsqr.js','qrcode.js','logo-k.png','logo-kiddy.png','icon-192.png'];
+const C='kiddy-x23',SHELL=['./','index.html','manifest.json','supabase.min.js','fonts/onest.woff2','fonts/unbounded.woff2','jsqr.js','qrcode.js','logo-k.png','logo-kiddy.png','icon-192.png'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>Promise.all(SHELL.map(u=>c.add(u).catch(()=>{})))))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!=C).map(k=>caches.delete(k)))).then(()=>clients.claim())));
 self.addEventListener('fetch',e=>{const r=e.request;if(r.method!='GET'||new URL(r.url).origin!=location.origin)return;

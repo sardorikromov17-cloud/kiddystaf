@@ -51,7 +51,7 @@ nav button,.tile{position:relative}.bd{display:none;position:absolute;top:1px;le
 @font-face{font-family:Onest;src:url(fonts/onest.woff2) format('woff2');font-weight:100 900;font-display:swap}
 @font-face{font-family:Unbounded;src:url(fonts/unbounded.woff2) format('woff2');font-weight:200 900;font-display:swap}
 :root{--ink:#1D2566;--p:#1D2566;--p2:#3B4690;--bg:#F4F5F8;--tx:#161B3A;--mu:#6B7288;--ln:#E3E5EC;--gr:#4E8A2B;--rd:#C93434;--or:#D9771A;--bl:#4A57A6;--fd:Unbounded,Onest,system-ui,sans-serif}
-body{font-family:Onest,-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);font-size:14.5px;line-height:1.5;padding-bottom:78px}
+body{font-family:Onest,-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);font-size:14.5px;line-height:1.5;padding-bottom:96px}
 header{max-width:none;border-radius:0;background:#fff;color:var(--tx);box-shadow:none;border-bottom:1px solid var(--ln);padding:calc(10px + env(safe-area-inset-top)) max(16px,calc((100vw - 520px)/2 + 16px)) 10px;position:sticky;top:0;z-index:30;gap:10px}
 header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:4px;background:linear-gradient(90deg,#4A57A6 0 25%,#7BA23A 25% 50%,#E8892A 50% 75%,#D63A3A 75% 100%)}
 header b{font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:-.2px;color:var(--ink)}header small{opacity:1;color:var(--mu);font-size:12px}
@@ -82,27 +82,25 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .st div:nth-child(1){border-top:3px solid var(--gr)}.st div:nth-child(2){border-top:3px solid var(--or)}.st div:nth-child(3){border-top:3px solid var(--rd)}.st div:nth-child(4){border-top:3px solid var(--bl)}
 table{font-size:13px}td{padding:9px 2px}
 a{color:var(--bl);font-weight:600}
-nav{left:0;transform:none;bottom:0;width:100%;max-width:none;border-radius:0;box-shadow:none;border-top:1px solid var(--ln);padding:4px max(6px,calc((100vw - 520px)/2)) calc(4px + env(safe-area-inset-bottom));margin:0;background:#fff;gap:2px}
-nav button{border-radius:10px;color:#8A90A6;font-weight:600;font-size:10.5px;padding:8px 2px 6px;background:none!important;position:relative}
-nav button:hover{background:none}
-nav .on{color:var(--ink);background:none!important}
-nav .on::before{content:"";position:absolute;top:0;left:30%;right:30%;height:3px;border-radius:0 0 3px 3px;background:var(--ink)}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:10px;width:calc(100% - 20px);max-width:500px;border-radius:22px;border:1px solid var(--ln);box-shadow:0 8px 30px #1B214222;padding:6px;margin-bottom:env(safe-area-inset-bottom);background:#fff;gap:2px}
+nav button{border-radius:16px;color:#8A90A6;font-weight:600;font-size:11px;padding:8px 4px;background:none!important;position:relative}
+nav .on{color:var(--ink);background:#E8EAF7!important}
 nav svg{stroke-width:1.8}nav .on svg{stroke-width:2.2}
 .b{border-radius:14px 14px 14px 4px;box-shadow:none;border:1px solid var(--ln)}.b.me{background:var(--ink);border-color:var(--ink);border-radius:14px 14px 4px 14px}
 .hero .chip,.hero .chip2{color:#fff}
-#sh .sheet{border-radius:18px 18px 0 0;padding-bottom:84px}
+#sh .sheet{border-radius:18px 18px 0 0;padding-bottom:96px}
 .tile{background:#fff!important;border:1px solid var(--ln);border-radius:14px!important;color:var(--tx)}.tile svg{stroke:var(--ink)!important}
 .gt{font-family:var(--fd);font-size:11px!important;font-weight:600;letter-spacing:0!important;text-transform:none!important;color:var(--mu)}
 .gtb th{background:var(--ink)}.gtb .n{font-family:Onest}
 .sk{border-radius:10px}
 .bd.on{background:var(--rd)!important}
-@media(min-width:900px){body{padding-bottom:0}nav button{flex:none;margin-bottom:6px}nav{position:fixed;left:0;top:0;bottom:0;width:84px;flex-direction:column;justify-content:flex-start;border-top:0;border-right:1px solid var(--ln);padding:90px 6px 10px;overflow:auto}nav .on::before{top:25%;bottom:25%;left:0;right:auto;width:3px;height:auto;border-radius:0 3px 3px 0}header,main,#dm{margin-left:84px;max-width:none}main{max-width:760px;margin:0 auto 0 calc(84px + 24px)}header{padding-left:24px;padding-right:24px}}
+
 .tdh{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;border-color:var(--ink)}.tdh .m{color:#ffffffb3}.tdd{font-family:var(--fd);font-size:17px;font-weight:700;letter-spacing:-.3px;margin-top:2px}.tdc{font-family:var(--fd);font-size:24px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
 .tg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}.tg3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
-.tl{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-left:5px solid var(--bl);transition:.12s}.tl:active{transform:scale(.97)}.tl:hover{border-color:var(--ink)}
+.tl{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-left:5px solid var(--bl);transition:.12s}.tl:active{transform:scale(.97)}.tl:hover{border-color:#B9C0E6;background:#F6F7FD}.tl:active{background:#ECEFFB}
 .tl b{font-family:var(--fd);font-size:30px;font-weight:700;letter-spacing:-1px;color:var(--ink);line-height:1.1}.tl span{font-size:13px;color:var(--mu);font-weight:600}
-.tl.g{border-left-color:var(--gr)}.tl.o{border-left-color:var(--or)}.tl.r{border-left-color:var(--rd)}.tl.b{border-left-color:var(--bl)}
-.gtb .hh{color:#4E8A2B;font-weight:700}.tl.s{padding:10px 12px;border-left-width:1px;align-items:flex-start}.tl.s b{font-size:20px}.tl.s span{font-size:12px}
+.tl.cg{border-left-color:var(--gr)}.tl.co{border-left-color:var(--or)}.tl.cr{border-left-color:var(--rd)}.tl.cb{border-left-color:var(--bl)}
+.gtb .hh{color:#4E8A2B;font-weight:700}.tl.cs{padding:10px 12px;border-left-width:1px;align-items:flex-start}.tl.cs b{font-size:20px}.tl.cs span{font-size:12px}
 </style></head><body>
 <header><div class=lg><img src=logo-k.png alt=K></div><div><b>Kiddy Ishxona</b><small id=who>Boshqaruv tizimi</small></div><button id="out" style="display:none" onclick="db.auth.signOut().then(()=>location.reload())">Chiqish</button></header>
 <div id="dm"></div><main id="v"></main><div id="md"></div><div id="sh" onclick="A.menu()"></div><div id="slipv"></div><nav id="n"></nav>
@@ -395,7 +393,7 @@ const GM={home:'Asosiy',month:'Asosiy',tasks:'Asosiy',fin:'Asosiy',trips:'Asosiy
 function buildNav(T){const pr=A.pr=(PRIM[pf.role]||PRIM.employee).filter(k=>T.some(x=>x[0]==k)),lab=k=>T.find(x=>x[0]==k)[1];
 $('#n').innerHTML=pr.map(k=>`<button data-t=${k} onclick="nv('${k}')"><svg viewBox="0 0 24 24">${IC[k]}</svg>${lab(k)}<b class=bd data-bd=${k}></b></button>`).join('')+`<button id=mb onclick=A.menu()><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Menyu<b class=bd id=mbd></b></button>`;
 const gs={};T.forEach(x=>(gs[GM[x[0]]||'Boshqa']??=[]).push(x));
-$('#sh').innerHTML='<div class=sheet onclick=event.stopPropagation()>'+['Asosiy','Kundalik','Xodimlar','Moliya','Aloqa','Boshqa'].filter(g=>gs[g]).map(g=>`<div class=gt>${g}</div><div class=grid>${gs[g].map(x=>`<div class=tile onclick="A.mgo('${x[0]}')"><svg viewBox="0 0 24 24" width=26 height=26>${IC[x[0]]}</svg><span>${x[1]}</span><b class=bd data-bd=${x[0]}></b></div>`).join('')}</div>`).join('')+'<div style="text-align:center;color:#94A3B8;font-size:11px;margin:14px 0 70px">Versiya v22</div></div>'}
+$('#sh').innerHTML='<div class=sheet onclick=event.stopPropagation()>'+['Asosiy','Kundalik','Xodimlar','Moliya','Aloqa','Boshqa'].filter(g=>gs[g]).map(g=>`<div class=gt>${g}</div><div class=grid>${gs[g].map(x=>`<div class=tile onclick="A.mgo('${x[0]}')"><svg viewBox="0 0 24 24" width=26 height=26>${IC[x[0]]}</svg><span>${x[1]}</span><b class=bd data-bd=${x[0]}></b></div>`).join('')}</div>`).join('')+'<div style="text-align:center;color:#94A3B8;font-size:11px;margin:14px 0 70px">Versiya v23</div></div>'}
 A.menu=()=>{paintBadges();$('#sh').classList.toggle('on')};A.menu0=()=>$('#sh').classList.toggle('on');A.mgo=k=>{$('#sh').classList.remove('on');nv(k)};
 navigator.serviceWorker?.addEventListener('message',e=>{if(e.data=='new'&&!$('#upd'))document.body.insertAdjacentHTML('afterbegin','<div id=upd style="background:#4A57A6;color:#fff;padding:10px;text-align:center;font-size:13px;position:sticky;top:0;z-index:60">Yangi versiya tayyor. <b onclick=location.reload() style="text-decoration:underline;cursor:pointer;margin-left:6px">Yangilash</b></div>')});
 const _p4=V.prof;V.prof=async()=>{const h=await _p4();return pf.role=='admin'?h+`<div class=c><b>Tezlik testi</b><div class=m>Server javobi necha millisekundda kelishini o'lchaydi.</div><div class=r><button class=bl onclick=A.ping()>O'lchash</button></div><div class=m id=pg style="margin-top:8px"></div></div>`:h};
@@ -554,7 +552,7 @@ const bd=act.filter(p=>p.birth_date&&p.birth_date.slice(5)==t.slice(5)).map(p=>e
 A.tdd={C,t,exp,came,pc,bd,sos:sos.data||[],cnt:act.length,nb:br.data.length};
 return A.tdh()};
 A.tdh=()=>{const D=A.tdd,C=D.C;if(A.td){const m=TDK[A.td],L=C[A.td];return `<div class=c><div class=r style="margin:0 0 10px"><button class=gh style="flex:none;width:auto;padding:8px 14px" onclick="A.tds(null)">← Orqaga</button></div><b>${m[0]} · ${L.length}</b>${L.map(x=>`<div class=li><span><b>${esc(x.p.full_name)}</b><br><span class=m>${esc(x.br)}${x.p.position?' · '+esc(x.p.position):''}${x.g?.in?' · keldi '+hm(x.g.in):''}${x.g?.out?' · ketdi '+hm(x.g.out):''}</span>${x.lt>GRACE?'<br>'+chipL(x.lt):''}${x.g?phl(x.g.pi):''}</span><span class="chip ${m[2]}">${A.td=='l'?x.lt+' daq':m[1]}</span></div>`).join('')||'<p class=m>Hech kim yo\'q</p>'}</div>`}
-const n=new Date(),tl=(k,lab,cl)=>`<div class="tl ${cl}" onclick="A.tds('${k}')"><b>${C[k].length}</b><span>${lab}</span></div>`;
+const n=new Date(),tl=(k,lab,cl)=>`<div class="tl c${cl}" onclick="A.tds('${k}')"><b>${C[k].length}</b><span>${lab}</span></div>`;
 return `<div class="c tdh"><div><div class=m>${UWD[n.getDay()]}</div><div class=tdd>${n.getDate()}-${UMO[n.getMonth()]} ${n.getFullYear()}</div></div><div id=clk class=tdc>${n.toLocaleTimeString('en-GB')}</div></div>
 ${D.sos.filter(sosVisible).map(x=>`<div class=c style="background:#FBE3E3"><span class=xb onclick="A.sx(${x.id})">✕</span><b>🚨 SOS: ${esc(x.profiles?.full_name)}</b> · ${hm(x.created_at)}<div class=r><a target=_blank href="https://www.openstreetmap.org/?mlat=${x.lat}&mlon=${x.lng}#map=16/${x.lat}/${x.lng}">Xaritada ochish</a></div></div>`).join('')}
 <div class=tg>${tl('w','Ishda','g')}${tl('k','Ketdi','b')}${tl('l','Kechikdi','o')}${tl('n','Kelmadi','r')}</div>
